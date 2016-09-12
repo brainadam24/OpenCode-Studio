@@ -40,6 +40,7 @@
             this.ausführenToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.kompilierenUndAusführenToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.toolsToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.explorerToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.eingabeaufforderungToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.taschenrechnerToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.hilfeToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
@@ -50,6 +51,7 @@
             this.Quelltext = new System.Windows.Forms.TextBox();
             this.button1 = new System.Windows.Forms.Button();
             this.mainProgress = new System.Windows.Forms.ProgressBar();
+            this.noParamToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.groupBox1.SuspendLayout();
             this.menuStrip1.SuspendLayout();
             this.groupBox2.SuspendLayout();
@@ -154,11 +156,21 @@
             // toolsToolStripMenuItem
             // 
             this.toolsToolStripMenuItem.DropDownItems.AddRange(new System.Windows.Forms.ToolStripItem[] {
+            this.explorerToolStripMenuItem,
             this.eingabeaufforderungToolStripMenuItem,
             this.taschenrechnerToolStripMenuItem});
             this.toolsToolStripMenuItem.Name = "toolsToolStripMenuItem";
             this.toolsToolStripMenuItem.Size = new System.Drawing.Size(47, 20);
             this.toolsToolStripMenuItem.Text = "Tools";
+            // 
+            // explorerToolStripMenuItem
+            // 
+            this.explorerToolStripMenuItem.DropDownItems.AddRange(new System.Windows.Forms.ToolStripItem[] {
+            this.noParamToolStripMenuItem});
+            this.explorerToolStripMenuItem.Name = "explorerToolStripMenuItem";
+            this.explorerToolStripMenuItem.Size = new System.Drawing.Size(186, 22);
+            this.explorerToolStripMenuItem.Text = "Explorer";
+            this.explorerToolStripMenuItem.Click += new System.EventHandler(this.explorerToolStripMenuItem_Click);
             // 
             // eingabeaufforderungToolStripMenuItem
             // 
@@ -241,6 +253,13 @@
             this.mainProgress.Size = new System.Drawing.Size(910, 12);
             this.mainProgress.TabIndex = 4;
             // 
+            // noParamToolStripMenuItem
+            // 
+            this.noParamToolStripMenuItem.Name = "noParamToolStripMenuItem";
+            this.noParamToolStripMenuItem.Size = new System.Drawing.Size(152, 22);
+            this.noParamToolStripMenuItem.Text = "no param";
+            this.noParamToolStripMenuItem.Click += new System.EventHandler(this.noParamToolStripMenuItem_Click);
+            // 
             // Form1
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -292,6 +311,8 @@
         private System.Windows.Forms.ToolStripMenuItem neuToolStripMenuItem;
         private System.Windows.Forms.ToolStripMenuItem dokumentationToolStripMenuItem;
         private System.Windows.Forms.ToolStripMenuItem eingabeaufforderungToolStripMenuItem;
+        private System.Windows.Forms.ToolStripMenuItem explorerToolStripMenuItem;
+        private System.Windows.Forms.ToolStripMenuItem noParamToolStripMenuItem;
     }
 }
 

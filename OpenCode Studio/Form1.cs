@@ -3,7 +3,9 @@ using System;
 using System.Collections.Generic;
 using System.ComponentModel;
 using System.Data;
+using System.Diagnostics;
 using System.Drawing;
+using System.IO;
 using System.Text;
 using System.Text.RegularExpressions;
 using System.Windows.Forms;
@@ -102,6 +104,7 @@ namespace OpenCode_Studio
             Ausgabe("Source Code successfully minified");
 
             /*And SIMPLE*/
+            //(replace foreign commands and attributes with internal, short, commands)
 
             Ausgabe("Source Code successfully compiled");
             return input;
@@ -188,7 +191,7 @@ namespace OpenCode_Studio
 
         private void taschenrechnerToolStripMenuItem_Click(object sender, EventArgs e)
         {
-            System.Diagnostics.Process.Start("calc");
+            Process.Start("calc");
             //System.Diagnostics.Process p = System.Diagnostics.Process.Start("calc.exe");
             //p.WaitForInputIdle();
             //NativeMethods.SetParent(p.MainWindowHandle, this.Handle);
@@ -206,7 +209,17 @@ namespace OpenCode_Studio
 
         private void eingabeaufforderungToolStripMenuItem_Click(object sender, EventArgs e)
         {
-            System.Diagnostics.Process.Start("cmd");
+            Process.Start("cmd");
+        }
+
+        private void explorerToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            Process.Start("explorer.exe", ".");
+        }
+
+        private void noParamToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            Process.Start("explorer.exe");
         }
     }
 }
